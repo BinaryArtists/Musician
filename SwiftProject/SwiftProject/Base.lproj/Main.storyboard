@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hHi-br-DWZ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Search Music Home PageVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SearchMusicHomePageVC" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rH2-e2-V02"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="368"/>
+        </scene>
+        <!--查找音乐-->
+        <scene sceneID="7we-bi-43K">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Oc-ai-ZFw" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="查找音乐" image="nav_music" id="mWN-kU-a9i"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="l0V-AO-G0x">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="J8W-mG-0M0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="diP-h1-ctb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1202" y="442"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Ucx-bI-X1o">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hHi-br-DWZ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="MNw-hz-z8r">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="3Oc-ai-ZFw" kind="relationship" relationship="viewControllers" id="fih-vv-u0O"/>
+                        <segue destination="cwD-dn-YTU" kind="relationship" relationship="viewControllers" id="szC-ea-x15"/>
+                        <segue destination="wW2-u0-znx" kind="relationship" relationship="viewControllers" id="cQO-Fj-0xr"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xau-Vg-hY7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="360" y="1542"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Wbo-M6-04V">
+            <objects>
+                <viewController id="eeW-Y9-jcf" customClass="ViewController" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tuj-q8-nXG"/>
+                        <viewControllerLayoutGuide type="bottom" id="vLu-WQ-Elc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lbr-0B-2NR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="YgF-75-LOG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nnu-Dd-REh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2095" y="1226"/>
+        </scene>
+        <!--我的音乐-->
+        <scene sceneID="RDj-hZ-t09">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cwD-dn-YTU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的音乐" image="mymusci" id="GBF-vk-zEo"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W20-iy-jl8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="eeW-Y9-jcf" kind="relationship" relationship="rootViewController" id="pWK-ch-B0W"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QB2-LZ-Lc9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1210" y="1226"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tSY-8D-0NT">
+            <objects>
+                <viewController id="53f-ff-5CS" customClass="ViewController" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XJ7-0Q-6uN"/>
+                        <viewControllerLayoutGuide type="bottom" id="AFj-b3-4x6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f6k-Th-bkv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tum-YR-7oc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oY0-Te-fKd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101" y="2098"/>
+        </scene>
+        <!--我-->
+        <scene sceneID="CLG-Vb-GKm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wW2-u0-znx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我" image="icon_me1" id="7fY-Rl-ydH"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yxF-UT-Oe7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="53f-ff-5CS" kind="relationship" relationship="rootViewController" id="sYZ-JP-TQY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Hx-qL-TPE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1224" y="2106"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icon_me1" width="25" height="25"/>
+        <image name="mymusci" width="21" height="23"/>
+        <image name="nav_music" width="36" height="36"/>
+    </resources>
+</document>
