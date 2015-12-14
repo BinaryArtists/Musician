@@ -14,6 +14,7 @@ class SearchMusicHomePageVC: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "查找音乐";
+        self.view.backgroundColor = UIColor.themeBlueColor()
     }
 
 }

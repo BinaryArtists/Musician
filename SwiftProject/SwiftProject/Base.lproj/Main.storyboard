@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hHi-br-DWZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hHi-br-DWZ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
         <!--Search Music Home PageVC-->
@@ -15,7 +15,29 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CWp-JI-3sW">
+                                <rect key="frame" x="0.0" y="240" width="600" height="311"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mhx-38-XWC">
+                                <rect key="frame" x="0.0" y="64" width="600" height="168"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="khm-4K-MPh"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="CWp-JI-3sW" secondAttribute="bottom" id="4Y5-YH-cCl"/>
+                            <constraint firstItem="Mhx-38-XWC" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="6CR-99-N5G"/>
+                            <constraint firstAttribute="trailing" secondItem="Mhx-38-XWC" secondAttribute="trailing" id="8SM-D6-IZM"/>
+                            <constraint firstItem="CWp-JI-3sW" firstAttribute="top" secondItem="Mhx-38-XWC" secondAttribute="bottom" constant="8" id="8Zy-uz-xet"/>
+                            <constraint firstItem="CWp-JI-3sW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JEw-io-trj"/>
+                            <constraint firstAttribute="trailing" secondItem="CWp-JI-3sW" secondAttribute="trailing" id="LFY-4g-Jjk"/>
+                            <constraint firstItem="Mhx-38-XWC" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="LtQ-gK-ZQI"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rH2-e2-V02"/>
                 </viewController>
@@ -61,10 +83,10 @@
             </objects>
             <point key="canvasLocation" x="360" y="1542"/>
         </scene>
-        <!--View Controller-->
+        <!--My Music Home Page-->
         <scene sceneID="Wbo-M6-04V">
             <objects>
-                <viewController id="eeW-Y9-jcf" customClass="ViewController" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eeW-Y9-jcf" customClass="MyMusicHomePage" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tuj-q8-nXG"/>
                         <viewControllerLayoutGuide type="bottom" id="vLu-WQ-Elc"/>
@@ -99,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="1210" y="1226"/>
         </scene>
-        <!--View Controller-->
+        <!--Personal Center-->
         <scene sceneID="tSY-8D-0NT">
             <objects>
-                <viewController id="53f-ff-5CS" customClass="ViewController" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="53f-ff-5CS" customClass="PersonalCenter" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XJ7-0Q-6uN"/>
                         <viewControllerLayoutGuide type="bottom" id="AFj-b3-4x6"/>
@@ -136,6 +158,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hx-qL-TPE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1224" y="2106"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="Ifg-97-gtX">
+            <objects>
+                <tableViewController id="ybo-g7-RPU" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lm4-7V-XpU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZzW-NG-JIE">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZzW-NG-JIE" id="Eq2-Fa-WbL">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ybo-g7-RPU" id="8uU-hz-OsX"/>
+                            <outlet property="delegate" destination="ybo-g7-RPU" id="VcC-OI-v0W"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jaL-Ku-bjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
     <resources>

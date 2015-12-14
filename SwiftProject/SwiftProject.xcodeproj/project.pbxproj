@@ -14,6 +14,14 @@
 		4B10E7911BE22327009FCAB2 /* SwiftProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B10E7901BE22327009FCAB2 /* SwiftProjectTests.swift */; };
 		4B10E79C1BE22327009FCAB2 /* SwiftProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B10E79B1BE22327009FCAB2 /* SwiftProjectUITests.swift */; };
 		4B24716D1C045000006E7113 /* SearchMusicHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B24716C1C045000006E7113 /* SearchMusicHomePage.swift */; };
+		4BF707D91C1E5B26005EE40E /* NSString+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF707D81C1E5B26005EE40E /* NSString+Size.swift */; };
+		4BF707DC1C1E71F8005EE40E /* UIView+Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF707DB1C1E71F8005EE40E /* UIView+Frame.swift */; };
+		4BF707DE1C1EA4D7005EE40E /* UIColor+UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF707DD1C1EA4D7005EE40E /* UIColor+UIColor.swift */; };
+		4BF707E11C1EB14A005EE40E /* MyMusicHomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF707E01C1EB14A005EE40E /* MyMusicHomePage.swift */; };
+		4BF707E31C1EB174005EE40E /* PersonalCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF707E21C1EB174005EE40E /* PersonalCenter.swift */; };
+		4BF707E61C1EBC30005EE40E /* centerImageTitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF707E51C1EBC30005EE40E /* centerImageTitleButton.swift */; };
+		4BF707E91C1EBD18005EE40E /* UIButton+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF707E81C1EBD18005EE40E /* UIButton+Label.swift */; };
+		4BF707EB1C1EC1C0005EE40E /* CommonHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF707EA1C1EC1C0005EE40E /* CommonHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +55,14 @@
 		4B10E79B1BE22327009FCAB2 /* SwiftProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProjectUITests.swift; sourceTree = "<group>"; };
 		4B10E79D1BE22327009FCAB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B24716C1C045000006E7113 /* SearchMusicHomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMusicHomePage.swift; sourceTree = "<group>"; };
+		4BF707D81C1E5B26005EE40E /* NSString+Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSString+Size.swift"; sourceTree = "<group>"; };
+		4BF707DB1C1E71F8005EE40E /* UIView+Frame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Frame.swift"; sourceTree = "<group>"; };
+		4BF707DD1C1EA4D7005EE40E /* UIColor+UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+UIColor.swift"; path = "../UIView/UIColor+UIColor.swift"; sourceTree = "<group>"; };
+		4BF707E01C1EB14A005EE40E /* MyMusicHomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyMusicHomePage.swift; sourceTree = "<group>"; };
+		4BF707E21C1EB174005EE40E /* PersonalCenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonalCenter.swift; sourceTree = "<group>"; };
+		4BF707E51C1EBC30005EE40E /* centerImageTitleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = centerImageTitleButton.swift; sourceTree = "<group>"; };
+		4BF707E81C1EBD18005EE40E /* UIButton+Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Label.swift"; sourceTree = "<group>"; };
+		4BF707EA1C1EC1C0005EE40E /* CommonHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +147,9 @@
 		4B10E7A91BE22385009FCAB2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4BF707EA1C1EC1C0005EE40E /* CommonHeader.swift */,
+				4BF707EC1C1EC6BD005EE40E /* network */,
+				4BF707E41C1EBC05005EE40E /* view */,
 				4B24716E1C0451B8006E7113 /* image */,
 				4B10E7AA1BE223DF009FCAB2 /* Category */,
 			);
@@ -140,6 +159,8 @@
 		4B10E7AA1BE223DF009FCAB2 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				4BF707DF1C1EAEF0005EE40E /* UIColor */,
+				4BF707DA1C1E7174005EE40E /* UIView */,
 				4B8705431C02F97600F257C7 /* NSString */,
 			);
 			path = Category;
@@ -156,6 +177,7 @@
 		4B24716A1C0446EA006E7113 /* 我 */ = {
 			isa = PBXGroup;
 			children = (
+				4BF707E21C1EB174005EE40E /* PersonalCenter.swift */,
 			);
 			path = "我";
 			sourceTree = "<group>";
@@ -163,6 +185,7 @@
 		4B24716B1C0446EA006E7113 /* 我的音乐 */ = {
 			isa = PBXGroup;
 			children = (
+				4BF707E01C1EB14A005EE40E /* MyMusicHomePage.swift */,
 			);
 			path = "我的音乐";
 			sourceTree = "<group>";
@@ -177,8 +200,41 @@
 		4B8705431C02F97600F257C7 /* NSString */ = {
 			isa = PBXGroup;
 			children = (
+				4BF707D81C1E5B26005EE40E /* NSString+Size.swift */,
 			);
 			path = NSString;
+			sourceTree = "<group>";
+		};
+		4BF707DA1C1E7174005EE40E /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				4BF707DB1C1E71F8005EE40E /* UIView+Frame.swift */,
+				4BF707E81C1EBD18005EE40E /* UIButton+Label.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		4BF707DF1C1EAEF0005EE40E /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				4BF707DD1C1EA4D7005EE40E /* UIColor+UIColor.swift */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		4BF707E41C1EBC05005EE40E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4BF707E51C1EBC30005EE40E /* centerImageTitleButton.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		4BF707EC1C1EC6BD005EE40E /* network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,8 +367,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BF707DC1C1E71F8005EE40E /* UIView+Frame.swift in Sources */,
+				4BF707E61C1EBC30005EE40E /* centerImageTitleButton.swift in Sources */,
+				4BF707E11C1EB14A005EE40E /* MyMusicHomePage.swift in Sources */,
 				4B10E77C1BE22327009FCAB2 /* AppDelegate.swift in Sources */,
+				4BF707E31C1EB174005EE40E /* PersonalCenter.swift in Sources */,
+				4BF707EB1C1EC1C0005EE40E /* CommonHeader.swift in Sources */,
+				4BF707DE1C1EA4D7005EE40E /* UIColor+UIColor.swift in Sources */,
+				4BF707D91C1E5B26005EE40E /* NSString+Size.swift in Sources */,
 				4B24716D1C045000006E7113 /* SearchMusicHomePage.swift in Sources */,
+				4BF707E91C1EBD18005EE40E /* UIButton+Label.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
