@@ -13,5 +13,9 @@ class MyMusicHomePage: UIViewController {
     override func viewDidLoad() {
         self.title = "我的音乐"
         self.view.backgroundColor = UIColor.themePinkColor()
+        
+        // test
+        let testString = "fff";
+        testString.textSizeWith(0.1, width: 0.2);
     }
 }
