@@ -1,0 +1,3 @@
+[submodule "tool.swift"]
+	path = tool.swift
+	url = https://github.com/BinaryArtists/tool.swift.git
