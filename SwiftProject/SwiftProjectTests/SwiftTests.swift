@@ -8,9 +8,7 @@
 
 import XCTest
 
-/**
- * 1. 继承
- */
+//
 class TestTeacher: Teacher {
 
 }
@@ -30,7 +28,9 @@ class SwiftTests: XCTestCase {
     }
     
     func testExample() {
-        // ========
+        /**
+         * 1. 继承
+         */
         let aTestTeacher = TestTeacher.init(name: "夏老师")
         
         print(""+aTestTeacher.introduceSelf())

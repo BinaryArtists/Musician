@@ -20,7 +20,7 @@
 //
 //@end
 
-@interface OCTests : XCTestCase
+@interface OCTests : XCTestCase <StudentDelegate>
 
 @end
 
@@ -37,8 +37,20 @@
 }
 
 - (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    /**
+     * 1. 继承
+     */
+    // failed
+    
+    /**
+     *   2. 类引用
+     */
+    Student *aStudent    = [[Student alloc] initFromName:@"安老师"];
+    NSLog(@"%@", [aStudent introduceSelf]);
+    
+    /**
+     * 3.
+     */
 }
 
 - (void)testPerformanceExample {
@@ -46,6 +58,12 @@
     [self measureBlock:^{
         // Put the code you want to measure the time of here.
     }];
+}
+
+#pragma mark - StudentDelegate
+
+- (void)testFunc {
+    
 }
 
 @end
