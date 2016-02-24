@@ -30,8 +30,8 @@
 		6A13D3D91C1FDF8E00D4A10C /* Button.Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13D3D81C1FDF8E00D4A10C /* Button.Label.swift */; };
 		6A13D3DD1C1FE00100D4A10C /* Color.theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13D3DC1C1FE00100D4A10C /* Color.theme.swift */; };
 		B7CBF3A80C761C1BFB59F267 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9322B798B5203AC1B5A2DC88 /* Pods.framework */; };
-		F6DB5EC01C7DE46A00EA2B0C /* MacroFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB5EBF1C7DE46900EA2B0C /* MacroFunction.swift */; };
-		F6DB5EC31C7DE4C600EA2B0C /* Notification+center.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB5EC21C7DE4C600EA2B0C /* Notification+center.swift */; };
+		F6DB5EC51C7DE98600EA2B0C /* NotificationCenter+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB5EC41C7DE98600EA2B0C /* NotificationCenter+Add.swift */; };
+		F6DB5EC71C7DE99D00EA2B0C /* MacroFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB5EC61C7DE99D00EA2B0C /* MacroFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +81,8 @@
 		6A13D3DC1C1FE00100D4A10C /* Color.theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.theme.swift; sourceTree = "<group>"; };
 		9322B798B5203AC1B5A2DC88 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B871F0F61D5E7F8287870D7E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F6DB5EBF1C7DE46900EA2B0C /* MacroFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroFunction.swift; sourceTree = "<group>"; };
-		F6DB5EC21C7DE4C600EA2B0C /* Notification+center.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Notification+center.swift"; sourceTree = "<group>"; };
+		F6DB5EC41C7DE98600EA2B0C /* NotificationCenter+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Add.swift"; sourceTree = "<group>"; };
+		F6DB5EC61C7DE99D00EA2B0C /* MacroFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,7 +221,7 @@
 				6A13D3D01C1FDE8000D4A10C /* README.md */,
 				6A13D3D11C1FDE8000D4A10C /* String+ */,
 				6A13D3D21C1FDE8000D4A10C /* View+ */,
-				F6DB5EBF1C7DE46900EA2B0C /* MacroFunction.swift */,
+				F6DB5EC61C7DE99D00EA2B0C /* MacroFunction.swift */,
 			);
 			name = tool.swift;
 			path = ../tool.swift;
@@ -264,7 +264,7 @@
 		F6DB5EC11C7DE4B300EA2B0C /* NotificationCenter+ */ = {
 			isa = PBXGroup;
 			children = (
-				F6DB5EC21C7DE4C600EA2B0C /* Notification+center.swift */,
+				F6DB5EC41C7DE98600EA2B0C /* NotificationCenter+Add.swift */,
 			);
 			path = "NotificationCenter+";
 			sourceTree = "<group>";
@@ -452,7 +452,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A13D3D91C1FDF8E00D4A10C /* Button.Label.swift in Sources */,
-				F6DB5EC31C7DE4C600EA2B0C /* Notification+center.swift in Sources */,
 				6A13D3D71C1FDEE800D4A10C /* View.frame.swift in Sources */,
 				4BF707E11C1EB14A005EE40E /* MyMusicHomePage.swift in Sources */,
 				44C715A21C72D48E007F5D08 /* Student.swift in Sources */,
@@ -462,8 +461,9 @@
 				4BF707E31C1EB174005EE40E /* PersonalCenter.swift in Sources */,
 				4B24716D1C045000006E7113 /* SearchMusicHomePage.swift in Sources */,
 				44C715A01C72D286007F5D08 /* Teacher.m in Sources */,
-				F6DB5EC01C7DE46A00EA2B0C /* MacroFunction.swift in Sources */,
 				6A13D3D31C1FDE8000D4A10C /* README.md in Sources */,
+				F6DB5EC71C7DE99D00EA2B0C /* MacroFunction.swift in Sources */,
+				F6DB5EC51C7DE98600EA2B0C /* NotificationCenter+Add.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
