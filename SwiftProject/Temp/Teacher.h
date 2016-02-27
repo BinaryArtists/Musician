@@ -14,4 +14,8 @@
 
 - (NSString *)introduceSelf;
 
++ (instancetype)teacher2WithAliasName:(NSString *)name;
+
++ (NSString *)teacherWithAliasName;
+
 @end

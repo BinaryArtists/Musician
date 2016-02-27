@@ -7,6 +7,8 @@
 //
 
 import XCTest
+import UIKit
+import Foundation
 
 //
 class TestTeacher: Teacher {
@@ -40,6 +42,17 @@ class SwiftTests: XCTestCase {
         */
         let aTeacher    = Teacher.init(name: "大汉老师")
         print(""+aTeacher.introduceSelf())
+        
+        let theTeacher = Teacher.teacher2WithAliasName("dddddd")
+        let aString: String = Teacher.teacherWithAliasName()
+        
+        var myObject: AnyObject = UITableViewCell()
+        var color = myObject.textLabel!!.textColor
+        myObject = NSDate()
+        
+        var anColor = myObject.textLabel!!.text
+        
+        let myChar = myObject.characterAtIndex?(5)
     }
     
     func testPerformanceExample() {
