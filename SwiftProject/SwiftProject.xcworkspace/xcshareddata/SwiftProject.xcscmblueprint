@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "F7D1DD9663DEBF93E4768D05C6E711E3BD017FD5",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "F7D1DD9663DEBF93E4768D05C6E711E3BD017FD5" : 0,
+    "9FBBB0ABC73DC88F1BF38E0CA5BB0467304655F7" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A8AE42B6-01AF-4F4F-BEC3-7F0926714AB8",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "F7D1DD9663DEBF93E4768D05C6E711E3BD017FD5" : "Music\/",
+    "9FBBB0ABC73DC88F1BF38E0CA5BB0467304655F7" : "Music\/tool.swift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SwiftProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SwiftProject\/SwiftProject.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BinaryArtists\/tool.swift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9FBBB0ABC73DC88F1BF38E0CA5BB0467304655F7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/BinaryArtists\/Musician.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "F7D1DD9663DEBF93E4768D05C6E711E3BD017FD5"
+    }
+  ]
+}

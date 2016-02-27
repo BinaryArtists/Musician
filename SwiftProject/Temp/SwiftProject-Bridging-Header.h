@@ -3,3 +3,5 @@
 //
 
 #import "Teacher.h"
+@import SnapKit;
+@import Kingfisher;
