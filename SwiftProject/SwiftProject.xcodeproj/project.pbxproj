@@ -33,8 +33,7 @@
 		6A13D3D91C1FDF8E00D4A10C /* Button.Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13D3D81C1FDF8E00D4A10C /* Button.Label.swift */; };
 		6A13D3DD1C1FE00100D4A10C /* Color.theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13D3DC1C1FE00100D4A10C /* Color.theme.swift */; };
 		B7CBF3A80C761C1BFB59F267 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9322B798B5203AC1B5A2DC88 /* Pods.framework */; };
-		F6DB5EC51C7DE98600EA2B0C /* NotificationCenter+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB5EC41C7DE98600EA2B0C /* NotificationCenter+Add.swift */; };
-		F6DB5EC71C7DE99D00EA2B0C /* MacroFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DB5EC61C7DE99D00EA2B0C /* MacroFunction.swift */; };
+		F6D5C2061C859EA1005EDA44 /* View+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6D5C2051C859EA1005EDA44 /* View+Add.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,8 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4413BF591C805E8D000CE6BE /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		41F70D5156A73BA68F30BBFE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4413BF591C805E8D000CE6BE /* MyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		44C715981C72CEE4007F5D08 /* OCTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTests.m; sourceTree = "<group>"; };
 		44C7159A1C72CF02007F5D08 /* SwiftTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftTests.swift; sourceTree = "<group>"; };
 		44C7159D1C72D285007F5D08 /* SwiftProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftProject-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -87,8 +86,7 @@
 		6A13D3DC1C1FE00100D4A10C /* Color.theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.theme.swift; sourceTree = "<group>"; };
 		9322B798B5203AC1B5A2DC88 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B871F0F61D5E7F8287870D7E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F6DB5EC41C7DE98600EA2B0C /* NotificationCenter+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Add.swift"; sourceTree = "<group>"; };
-		F6DB5EC61C7DE99D00EA2B0C /* MacroFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroFunction.swift; sourceTree = "<group>"; };
+		F6D5C2051C859EA1005EDA44 /* View+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Add.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,7 +227,6 @@
 				6A13D3D01C1FDE8000D4A10C /* README.md */,
 				6A13D3D11C1FDE8000D4A10C /* String+ */,
 				6A13D3D21C1FDE8000D4A10C /* View+ */,
-				F6DB5EC61C7DE99D00EA2B0C /* MacroFunction.swift */,
 			);
 			name = tool.swift;
 			path = ../tool.swift;
@@ -257,6 +254,7 @@
 				6A13D3D61C1FDEE800D4A10C /* View.frame.swift */,
 				6A13D3D81C1FDF8E00D4A10C /* Button.Label.swift */,
 				44E2042A1C81EB730052140D /* View.tool.swift */,
+				F6D5C2051C859EA1005EDA44 /* View+Add.swift */,
 			);
 			path = "View+";
 			sourceTree = "<group>";
@@ -273,7 +271,6 @@
 		F6DB5EC11C7DE4B300EA2B0C /* NotificationCenter+ */ = {
 			isa = PBXGroup;
 			children = (
-				F6DB5EC41C7DE98600EA2B0C /* NotificationCenter+Add.swift */,
 			);
 			path = "NotificationCenter+";
 			sourceTree = "<group>";
@@ -469,13 +466,12 @@
 				6A13D3DD1C1FE00100D4A10C /* Color.theme.swift in Sources */,
 				4B10E77C1BE22327009FCAB2 /* AppDelegate.swift in Sources */,
 				6A13D3D51C1FDE9800D4A10C /* String.size.swift in Sources */,
+				F6D5C2061C859EA1005EDA44 /* View+Add.swift in Sources */,
 				4BF707E31C1EB174005EE40E /* PersonalCenter.swift in Sources */,
 				44E2042B1C81EB730052140D /* View.tool.swift in Sources */,
 				4B24716D1C045000006E7113 /* SearchMusicHomePage.swift in Sources */,
 				44C715A01C72D286007F5D08 /* Teacher.m in Sources */,
 				6A13D3D31C1FDE8000D4A10C /* README.md in Sources */,
-				F6DB5EC71C7DE99D00EA2B0C /* MacroFunction.swift in Sources */,
-				F6DB5EC51C7DE98600EA2B0C /* NotificationCenter+Add.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
