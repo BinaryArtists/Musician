@@ -7,7 +7,7 @@
         <!--Search Music Home PageVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SearchMusicHomePageVC" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchMusicHomePageVC" id="BYZ-38-t0r" customClass="SearchMusicHomePageVC" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -86,7 +86,7 @@
         <!--My Music Home Page-->
         <scene sceneID="Wbo-M6-04V">
             <objects>
-                <viewController id="eeW-Y9-jcf" customClass="MyMusicHomePage" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyMusicHomePage" id="eeW-Y9-jcf" customClass="MyMusicHomePage" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tuj-q8-nXG"/>
                         <viewControllerLayoutGuide type="bottom" id="vLu-WQ-Elc"/>
@@ -124,7 +124,7 @@
         <!--Personal Center-->
         <scene sceneID="tSY-8D-0NT">
             <objects>
-                <viewController id="53f-ff-5CS" customClass="PersonalCenter" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonalCenter" id="53f-ff-5CS" customClass="PersonalCenter" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="XJ7-0Q-6uN"/>
                         <viewControllerLayoutGuide type="bottom" id="AFj-b3-4x6"/>
@@ -167,16 +167,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZzW-NG-JIE">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZzW-NG-JIE" id="Eq2-Fa-WbL">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="ybo-g7-RPU" id="8uU-hz-OsX"/>
                             <outlet property="delegate" destination="ybo-g7-RPU" id="VcC-OI-v0W"/>
