@@ -31,6 +31,8 @@ class DBHomeController: DBBaseController {
 }
 
 
+
+
 class MenuView: UIView {
     var selectedIndex = 0
     var line:UILabel!
@@ -57,7 +59,6 @@ class MenuView: UIView {
             btn.setTitleColor(themeColor, forState: .Selected)
             btn.tintColor = UIColor.whiteColor()
             btn.titleLabel?.font = UIFont.systemScaleFontSize(17)
-//            btn.sizeToFit()
             btn.tag = 1000 + index
             if index == 0 {
                 btn.selected = DBTrue
@@ -84,7 +85,8 @@ class MenuView: UIView {
         selectedIndex = btn.tag - 1000
         UIView.animateWithDuration(0.3) { () -> Void in
             self.line.centerX = btn.centerX
-            self.line.width = self.itemWidths[self.selectedIndex]
+            self.line.width = self.itemWidths[self.selectedIndex]DBHomeController
+            
         }
         oldMenuItem = btn
     }
