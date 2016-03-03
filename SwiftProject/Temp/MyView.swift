@@ -15,8 +15,6 @@ class MyView: UIView {
     @IBOutlet weak var label: UILabel!
     @IBInspectable var textColor: UIColor {
         didSet {
-//            self.label.textColor = textColor // Does not work
-            
             self.layer.backgroundColor  = textColor.CGColor // work fine
         }
     }
