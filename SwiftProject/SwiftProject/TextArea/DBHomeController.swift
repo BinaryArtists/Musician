@@ -13,6 +13,7 @@ class DBHomeController: DBBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+//        view.backgroundColor = UIColor.orangeColor()
         configBar()
         // Do any additional setup after loading the view.
     }
@@ -65,6 +66,8 @@ class MenuView: UIView {
                 oldMenuItem = btn
             }
             btn.addTarget(self, action: "itemClick:", forControlEvents: .TouchUpInside)
+            
+            
             let width = menus[index].textSizeForOneLineWith(17).width
             itemWidths.append(width)
             addSubview(btn)
@@ -85,8 +88,7 @@ class MenuView: UIView {
         selectedIndex = btn.tag - 1000
         UIView.animateWithDuration(0.3) { () -> Void in
             self.line.centerX = btn.centerX
-            self.line.width = self.itemWidths[self.selectedIndex]DBHomeController
-            
+            self.line.width = self.itemWidths[self.selectedIndex]
         }
         oldMenuItem = btn
     }

@@ -33,6 +33,8 @@
 		6A13D3D91C1FDF8E00D4A10C /* Button.Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13D3D81C1FDF8E00D4A10C /* Button.Label.swift */; };
 		6A13D3DD1C1FE00100D4A10C /* Color.theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13D3DC1C1FE00100D4A10C /* Color.theme.swift */; };
 		B7CBF3A80C761C1BFB59F267 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9322B798B5203AC1B5A2DC88 /* Pods.framework */; };
+		F61774FD1C891E1700C378F4 /* UIDevice+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61774FC1C891E1700C378F4 /* UIDevice+Add.swift */; };
+		F61774FF1C89291F00C378F4 /* DBPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61774FE1C89291F00C378F4 /* DBPlayView.swift */; };
 		F62172D21C86EF6E00794E9E /* MacroFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62172D11C86EF6E00794E9E /* MacroFunctions.swift */; };
 		F62172D61C86F01300794E9E /* NotificationCenter+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62172D51C86F01300794E9E /* NotificationCenter+Add.swift */; };
 		F647AEA21C86843C0006E3FC /* View+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F647AEA11C86843C0006E3FC /* View+Add.swift */; };
@@ -92,6 +94,8 @@
 		6A13D3DC1C1FE00100D4A10C /* Color.theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.theme.swift; sourceTree = "<group>"; };
 		9322B798B5203AC1B5A2DC88 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B871F0F61D5E7F8287870D7E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F61774FC1C891E1700C378F4 /* UIDevice+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Add.swift"; sourceTree = "<group>"; };
+		F61774FE1C89291F00C378F4 /* DBPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlayView.swift; sourceTree = "<group>"; };
 		F62172D11C86EF6E00794E9E /* MacroFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroFunctions.swift; sourceTree = "<group>"; };
 		F62172D51C86F01300794E9E /* NotificationCenter+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationCenter+Add.swift"; sourceTree = "<group>"; };
 		F647AEA11C86843C0006E3FC /* View+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Add.swift"; sourceTree = "<group>"; };
@@ -283,6 +287,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		F61774FB1C891E0900C378F4 /* UIDevice+ */ = {
+			isa = PBXGroup;
+			children = (
+				F61774FC1C891E1700C378F4 /* UIDevice+Add.swift */,
+			);
+			path = "UIDevice+";
+			sourceTree = "<group>";
+		};
 		F62172D01C86EF5F00794E9E /* Macro */ = {
 			isa = PBXGroup;
 			children = (
@@ -294,6 +306,7 @@
 		F62172D31C86F00500794E9E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F61774FB1C891E0900C378F4 /* UIDevice+ */,
 				F674DD341C88523F00089EC8 /* UIFont+ */,
 				F62172D41C86F00500794E9E /* NotificationCenter+ */,
 			);
@@ -312,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				F674DD371C88568300089EC8 /* DBHomeController.swift */,
+				F61774FE1C89291F00C378F4 /* DBPlayView.swift */,
 			);
 			path = TextArea;
 			sourceTree = "<group>";
@@ -525,8 +539,10 @@
 				F674DD2F1C884A4B00089EC8 /* DBBaseController.swift in Sources */,
 				6A13D3D71C1FDEE800D4A10C /* View.frame.swift in Sources */,
 				4BF707E11C1EB14A005EE40E /* MyMusicHomePage.swift in Sources */,
+				F61774FF1C89291F00C378F4 /* DBPlayView.swift in Sources */,
 				44C715A21C72D48E007F5D08 /* Student.swift in Sources */,
 				6A13D3DD1C1FE00100D4A10C /* Color.theme.swift in Sources */,
+				F61774FD1C891E1700C378F4 /* UIDevice+Add.swift in Sources */,
 				4B10E77C1BE22327009FCAB2 /* AppDelegate.swift in Sources */,
 				6A13D3D51C1FDE9800D4A10C /* String.size.swift in Sources */,
 				F647AEA21C86843C0006E3FC /* View+Add.swift in Sources */,
