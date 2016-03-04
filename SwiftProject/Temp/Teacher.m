@@ -22,12 +22,20 @@
     return nil;
 }
 
++ (instancetype)teacher2WithAliasName:(NSString *)name{
+    return  nil;
+}
+
 - (instancetype)initWithName:(NSString *)name {
     if (self = [super init]) {
         _name = name;
     }
     
     return self;
+}
+
++ (NSString *)teacherWithAliasName{
+    return @"";
 }
 
 - (NSString *)introduceSelf {

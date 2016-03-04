@@ -67,7 +67,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Ucx-bI-X1o">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="hHi-br-DWZ" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabbarcontroller" automaticallyAdjustsScrollViewInsets="NO" id="hHi-br-DWZ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="MNw-hz-z8r">
                         <autoresizingMask key="autoresizingMask"/>
@@ -143,7 +143,7 @@
         <!--Base Navigation Controller-->
         <scene sceneID="kfq-Se-CVu">
             <objects>
-                <navigationController id="pzD-Uh-jHc" customClass="DBBaseNavigationController" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DBBaseNavigationController" id="pzD-Uh-jHc" customClass="DBBaseNavigationController" customModule="SwiftProject" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="2cS-WU-YAc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -193,24 +193,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Hx-qL-TPE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="653.33333333333337" y="1827.0666666666666"/>
-        </scene>
-        <!--Table View Controller-->
-        <scene sceneID="Ifg-97-gtX">
-            <objects>
-                <tableViewController id="ybo-g7-RPU" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="lm4-7V-XpU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="dataSource" destination="ybo-g7-RPU" id="8uU-hz-OsX"/>
-                            <outlet property="delegate" destination="ybo-g7-RPU" id="VcC-OI-v0W"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jaL-Ku-bjk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="362.13333333333333" y="-236.19333333333333"/>
         </scene>
     </scenes>
     <resources>
