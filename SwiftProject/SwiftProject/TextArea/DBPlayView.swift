@@ -44,7 +44,6 @@ class DBPlayView: UIView {
             }else{
                 heightConstant = 60 - translation.y
             }
-            DLog(heightConstant)
             if heightConstant > DBHeight - topBarHeight || heightConstant < 60{
                 return
             }
