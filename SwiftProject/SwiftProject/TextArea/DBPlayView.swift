@@ -7,12 +7,23 @@
 //
 
 import UIKit
+let topBarHeight:CGFloat = 64
 
 class DBPlayView: UIView {
-    var heightConstant:CGFloat = 60
-    var originalFrame:CGRect?
+    var viewHeightConstant:CGFloat = 60
+    var imageHeight:CGFloat = 40
+    var imageLeftMargin:CGFloat = 12
+    var imageTopMargin:CGFloat = 10
     var showing:Bool = DBFalse
-    let topBarHeight:CGFloat = 64
+    
+//MARK:Lazy
+    lazy var playImageView:RoundImageView = {
+        var imageView = RoundImageView()
+        imageView.layer.masksToBounds = DBTrue
+        return imageView
+    }()
+    
+//MARK:Life Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUI()
@@ -31,52 +42,80 @@ class DBPlayView: UIView {
         layer.shadowColor = UIColor.blackColor().CGColor
         let pan = UIPanGestureRecognizer(target: self, action: "pan:")
         addGestureRecognizer(pan)
+        setSubviews()
     }
     
+    func setSubviews(){
+        self.addSubview(self.playImageView)
+        self.playImageView.snp_makeConstraints { (make) -> Void in
+            make.height.width.equalTo(imageHeight)
+            make.left.equalTo(self).offset(imageLeftMargin)
+            make.top.equalTo(self).offset(imageTopMargin)
+        }
+        playImageView.image = UIImage(named: "headerImage")
+    }
+    
+//MARK:GestureRecognizer
     func pan(pan:UIPanGestureRecognizer){
-        
-        if pan.state == .Began{
-            originalFrame = self.frame
-        }else if(pan.state == .Changed){
+       if(pan.state == .Changed){
             let translation = pan.translationInView(self)
             if showing{
-                heightConstant = DBHeight - topBarHeight - translation.y
+                viewHeightConstant = DBHeight - topBarHeight - translation.y
+                imageHeight = DBWidth/2 - translation.y/3.65
+                imageLeftMargin = DBWidth/4 - translation.y/7
             }else{
-                heightConstant = 60 - translation.y
+                viewHeightConstant = 60 - translation.y
+                imageHeight = 40 - translation.y/3.65
+                imageLeftMargin = 12 - translation.y/7
             }
-            if heightConstant > DBHeight - topBarHeight || heightConstant < 60{
+            if viewHeightConstant > DBHeight - topBarHeight || viewHeightConstant < 60{
                 return
             }
             self.setNeedsUpdateConstraints()
             self.updateConstraintsIfNeeded()
         }else if(pan.state == .Ended){
             let halfHeight = (DBHeight - CGFloat(topBarHeight))/2
-            if heightConstant < halfHeight{
-                 heightConstant = 60
-                 showing = DBFalse
+            if viewHeightConstant < halfHeight{
+                viewHeightConstant = 60
+                imageHeight = 40
+                imageLeftMargin = 12
+                showing = DBFalse
             }else{
-                heightConstant = DBHeight - topBarHeight
+                viewHeightConstant = DBHeight - topBarHeight
+                imageHeight = DBWidth/2
+                imageLeftMargin = DBWidth/4
                 showing = DBTrue
             }
+            self.playImageView.snp_updateConstraints { (make) -> Void in
+                make.width.height.equalTo(imageHeight)
+                make.left.equalTo(imageLeftMargin)
+                make.top.equalTo(imageLeftMargin)
+            }
             self.snp_updateConstraints(closure: { (make) -> Void in
-                make.height.equalTo(heightConstant)
+                make.height.equalTo(viewHeightConstant)
             })
-            UIView.animateWithDuration(0.7, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 0.8, options:UIViewAnimationOptions.CurveEaseOut, animations: { () -> Void in
-                    self.layoutIfNeeded()
-                }, completion: nil)
-            
+            UIView.animateWithDuration(0.7, delay: 0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+                self.layoutIfNeeded()
+            }, completion:nil);
+        
         }
     }
     
     override func updateConstraints() {
         self.snp_updateConstraints { (make) -> Void in
-            make.height.equalTo(heightConstant)
+            make.height.equalTo(viewHeightConstant)
+        }
+        self.playImageView.snp_updateConstraints { (make) -> Void in
+            make.width.height.equalTo(imageHeight)
+            make.left.equalTo(imageLeftMargin)
+            make.top.equalTo(imageLeftMargin)
         }
         super.updateConstraints()
     }
     
     override func layoutSubviews() {
-        DLog("subViews")
+        
+    
     }
     
     

@@ -13,9 +13,7 @@ class DBHomeController: DBBaseController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = UIColor.orangeColor()
         configBar()
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -82,7 +80,6 @@ class MenuView: UIView {
         guard oldMenuItem.tag != btn.tag else{
             return
         }
-        
         oldMenuItem.selected = DBFalse
         btn.selected = DBTrue
         selectedIndex = btn.tag - 1000
