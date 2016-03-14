@@ -39,3 +39,10 @@ let result3 = result1.map { (string) -> Int in
     return Int(string)!
 }
 
+class Dog {
+    var age:Int!
+}
+let d = Dog()
+d.age = 1
+print(d.age)
+
