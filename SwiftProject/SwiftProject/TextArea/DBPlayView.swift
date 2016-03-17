@@ -7,13 +7,22 @@
 //
 
 import UIKit
-let topBarHeight:CGFloat = 64
+let NavigationBarHeight:CGFloat = 64
+private let ImageMiniHeight:CGFloat = 40
+private let ViewMiniHeight:CGFloat  = 60
+private let ImageMiniLeftMargin:CGFloat = 12
+private let ImageMaxLeftMargin:CGFloat = DBWidth/4
+private let ViewMaxHeight:CGFloat = DBHeight - NavigationBarHeight
+private let ImageMaxHeight:CGFloat = DBWidth/2
+
 
 class DBPlayView: UIView {
+    ///下方view高度 最低为60
     var viewHeightConstant:CGFloat = 60
-    var imageHeight:CGFloat = 40
-    var imageLeftMargin:CGFloat = 12
-    var imageTopMargin:CGFloat = 10
+    /// 下方图片视图宽高 最低为40
+    var imageHeight:CGFloat = ImageMiniHeight
+    /// 下方图片视图左侧间距，最小为12
+    var imageLeftMargin:CGFloat = ImageMiniLeftMargin
     var showing:Bool = DBFalse
     
 //MARK:Lazy
@@ -36,6 +45,7 @@ class DBPlayView: UIView {
 
 
     func setUI(){
+        DLog("height:\(NavigationBarHeight)");
         backgroundColor = UIColor.whiteColor()
         layer.shadowOffset = CGSizeMake(3,2);
         layer.shadowOpacity = 0.6;
@@ -48,7 +58,7 @@ class DBPlayView: UIView {
                 return
             }
             self.showing = DBTrue
-            self.viewHeightConstant = DBHeight - topBarHeight
+            self.viewHeightConstant = DBHeight - NavigationBarHeight
             self.imageHeight = DBWidth/2
             self.imageLeftMargin = DBWidth/4
             self.configSubviewWhenEnded()
@@ -61,7 +71,7 @@ class DBPlayView: UIView {
         self.playImageView.snp_makeConstraints { (make) -> Void in
             make.height.width.equalTo(imageHeight)
             make.left.equalTo(self).offset(imageLeftMargin)
-            make.top.equalTo(self).offset(imageTopMargin)
+            make.top.equalTo(self).offset(10)
         }
         playImageView.image = UIImage(named: "headerImage")
         
@@ -98,35 +108,34 @@ class DBPlayView: UIView {
     }
     
 //MARK:GestureRecognizer
-    //FIXME:下面的比例计算的有些许问题，在4s上存在一点点的瑕疵
     func pan(pan:UIPanGestureRecognizer){
        if(pan.state == .Changed){
             let translation = pan.translationInView(self)
             if showing{
-                viewHeightConstant = DBHeight - topBarHeight - translation.y
-                imageHeight = DBWidth/2 - translation.y/3.65
-                imageLeftMargin = DBWidth/4 - translation.y/7
+                viewHeightConstant = DBHeight - NavigationBarHeight - translation.y
             }else{
                 viewHeightConstant = 60 - translation.y
-                imageHeight = 40 - translation.y/3.65
-                imageLeftMargin = 12 - translation.y/7
             }
-            if viewHeightConstant > DBHeight - topBarHeight || viewHeightConstant < 60{
+            let normalValue = viewHeightConstant / ViewMaxHeight;//正比
+            let backValue   = 1 - normalValue; //反比  运用反比来弥补刚开始位移时候 图片的大小差值
+            imageHeight = (DBWidth/2) * normalValue + ImageMiniHeight/2 * backValue
+            imageLeftMargin = (DBWidth/4) * normalValue
+            if viewHeightConstant > DBHeight - NavigationBarHeight || viewHeightConstant < ViewMiniHeight{
                 return
             }
             self.setNeedsUpdateConstraints()
             self.updateConstraintsIfNeeded()
         }else if(pan.state == .Ended){
-            let halfHeight = (DBHeight - CGFloat(topBarHeight))/2
-            if viewHeightConstant < halfHeight{
-                viewHeightConstant = 60
-                imageHeight = 40
-                imageLeftMargin = 12
+            let halfHeight = (DBHeight - CGFloat(NavigationBarHeight))/2
+            if viewHeightConstant < halfHeight{ //最小
+                viewHeightConstant = ViewMiniHeight
+                imageHeight = ImageMiniHeight
+                imageLeftMargin = ImageMiniLeftMargin
                 showing = DBFalse
-            }else{
-                viewHeightConstant = DBHeight - topBarHeight
-                imageHeight = DBWidth/2
-                imageLeftMargin = DBWidth/4
+            }else{ //最大
+                viewHeightConstant = DBHeight - NavigationBarHeight
+                imageHeight = ImageMaxHeight
+                imageLeftMargin = ImageMaxLeftMargin
                 showing = DBTrue
             }
                 configSubviewWhenEnded()

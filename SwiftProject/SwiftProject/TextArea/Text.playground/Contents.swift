@@ -26,6 +26,10 @@ if case 18...25 = age where sex == "girl"{
     print("交往吧")
 }
 
+if case 18...25 = age where sex == "girl"{
+    print("hello")
+}
+
 
 var array = [1,2,3,4,5]
 let result1 = array.map { (number) -> String in
@@ -48,4 +52,27 @@ print(d.age)
 
 var  name:String?
 name = name ?? "asd"
+
+
+
+class Fruit {
+    
+}
+
+class Apple: Fruit {
+    
+}
+
+let apple = Apple()
+let fruit = Fruit()
+let fruits:[AnyObject] = [apple,fruit]
+for (index,item) in fruits.enumerate(){
+    if item is Apple{
+        print("苹果\(index)")
+    }
+    if item.isKindOfClass(Apple){
+        print("水果\(index)")
+    }
+}
+
 
