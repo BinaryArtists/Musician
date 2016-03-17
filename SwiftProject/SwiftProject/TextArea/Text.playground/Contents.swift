@@ -46,3 +46,6 @@ let d = Dog()
 d.age = 1
 print(d.age)
 
+var  name:String?
+name = name ?? "asd"
+
