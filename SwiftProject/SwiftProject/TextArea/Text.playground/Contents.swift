@@ -76,3 +76,9 @@ for (index,item) in fruits.enumerate(){
 }
 
 
+let a = 100
+let b = 200
+
+
+
+

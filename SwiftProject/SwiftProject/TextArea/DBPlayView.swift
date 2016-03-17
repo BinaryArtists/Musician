@@ -24,8 +24,18 @@ class DBPlayView: UIView {
     /// 下方图片视图左侧间距，最小为12
     var imageLeftMargin:CGFloat = ImageMiniLeftMargin
     var showing:Bool = DBFalse
-    
+    var musicNameLabel:UILabel!
+    var serialLabel:UILabel!
+    var persentValue:CGFloat = 0.0{
+        didSet{
+            musicNameLabel.alpha = CGFloat(1) - persentValue * 2
+            serialLabel.alpha    = CGFloat(1) - persentValue * 2
+            
+        }
+        
+    }
 //MARK:Lazy
+    /// 用自带圆形的ImageView能节省不少事情哦
     lazy var playImageView:RoundImageView = {
         var imageView = RoundImageView()
         imageView.layer.masksToBounds = DBTrue
@@ -45,7 +55,6 @@ class DBPlayView: UIView {
 
 
     func setUI(){
-        DLog("height:\(NavigationBarHeight)");
         backgroundColor = UIColor.whiteColor()
         layer.shadowOffset = CGSizeMake(3,2);
         layer.shadowOpacity = 0.6;
@@ -76,17 +85,15 @@ class DBPlayView: UIView {
         playImageView.image = UIImage(named: "headerImage")
         
         //bottomLabels
-        let serialLabel = factoryLabel()
+        serialLabel = factoryLabel()
         serialLabel.text = "轻音乐 系 MHz"
-        serialLabel.font = leve1004Font
-        serialLabel.textColor = gray004Color
         insertSubview(serialLabel, belowSubview: playImageView)
         serialLabel.snp_makeConstraints { (make) -> Void in
             make.bottom.equalTo(self.snp_bottom).offset(-10)
             make.left.equalTo(self).offset(60)
         }
         
-        let musicNameLabel = factoryLabel()
+        musicNameLabel = factoryLabel()
         musicNameLabel.text = "Music name"
         musicNameLabel.font = leve1002Font
         musicNameLabel.textColor = gray002Color
@@ -100,13 +107,6 @@ class DBPlayView: UIView {
         
     }
     
-    func factoryLabel() -> UILabel{
-        let label = UILabel()
-        label.textAlignment = .Center
-        label.backgroundColor = UIColor.whiteColor()
-        return label
-    }
-    
 //MARK:GestureRecognizer
     func pan(pan:UIPanGestureRecognizer){
        if(pan.state == .Changed){
@@ -116,13 +116,15 @@ class DBPlayView: UIView {
             }else{
                 viewHeightConstant = 60 - translation.y
             }
-            let normalValue = viewHeightConstant / ViewMaxHeight;//正比
-            let backValue   = 1 - normalValue; //反比  运用反比来弥补刚开始位移时候 图片的大小差值
-            imageHeight = (DBWidth/2) * normalValue + ImageMiniHeight/2 * backValue
-            imageLeftMargin = (DBWidth/4) * normalValue
             if viewHeightConstant > DBHeight - NavigationBarHeight || viewHeightConstant < ViewMiniHeight{
                 return
             }
+            let normalValue = viewHeightConstant / ViewMaxHeight;//正比
+            persentValue = CGFloat(normalValue)
+            let backValue   = 1 - normalValue; //反比  运用反比来弥补刚开始位移时候 图片的大小差值
+            imageHeight = (DBWidth/2) * normalValue + ImageMiniHeight/2 * backValue
+            imageLeftMargin = (DBWidth/4) * normalValue
+
             self.setNeedsUpdateConstraints()
             self.updateConstraintsIfNeeded()
         }else if(pan.state == .Ended){
@@ -132,11 +134,13 @@ class DBPlayView: UIView {
                 imageHeight = ImageMiniHeight
                 imageLeftMargin = ImageMiniLeftMargin
                 showing = DBFalse
+                persentValue = 0
             }else{ //最大
                 viewHeightConstant = DBHeight - NavigationBarHeight
                 imageHeight = ImageMaxHeight
                 imageLeftMargin = ImageMaxLeftMargin
                 showing = DBTrue
+                persentValue = 1
             }
                 configSubviewWhenEnded()
         }
