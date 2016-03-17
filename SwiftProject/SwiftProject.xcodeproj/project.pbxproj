@@ -30,6 +30,7 @@
 		6A13D3D91C1FDF8E00D4A10C /* Button.Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13D3D81C1FDF8E00D4A10C /* Button.Label.swift */; };
 		6A13D3DD1C1FE00100D4A10C /* Color.theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A13D3DC1C1FE00100D4A10C /* Color.theme.swift */; };
 		B7CBF3A80C761C1BFB59F267 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9322B798B5203AC1B5A2DC88 /* Pods.framework */; };
+		F6073B301C9A7E8F00D7BD11 /* IBInspecView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6073B2F1C9A7E8F00D7BD11 /* IBInspecView.swift */; };
 		F61774FD1C891E1700C378F4 /* UIDevice+Add.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61774FC1C891E1700C378F4 /* UIDevice+Add.swift */; };
 		F61774FF1C89291F00C378F4 /* DBPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61774FE1C89291F00C378F4 /* DBPlayView.swift */; };
 		F62172D21C86EF6E00794E9E /* MacroFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F62172D11C86EF6E00794E9E /* MacroFunctions.swift */; };
@@ -92,6 +93,7 @@
 		6A13D3DC1C1FE00100D4A10C /* Color.theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.theme.swift; sourceTree = "<group>"; };
 		9322B798B5203AC1B5A2DC88 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B871F0F61D5E7F8287870D7E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F6073B2F1C9A7E8F00D7BD11 /* IBInspecView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspecView.swift; sourceTree = "<group>"; };
 		F61774FC1C891E1700C378F4 /* UIDevice+Add.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Add.swift"; sourceTree = "<group>"; };
 		F61774FE1C89291F00C378F4 /* DBPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBPlayView.swift; sourceTree = "<group>"; };
 		F62172D11C86EF6E00794E9E /* MacroFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MacroFunctions.swift; sourceTree = "<group>"; };
@@ -353,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				F69CE2F11C8D5F94006EB9D1 /* RoundImageView.swift */,
+				F6073B2F1C9A7E8F00D7BD11 /* IBInspecView.swift */,
 			);
 			path = CustomerView;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 				F674DD2F1C884A4B00089EC8 /* DBBaseController.swift in Sources */,
 				6A13D3D71C1FDEE800D4A10C /* View.frame.swift in Sources */,
 				4BF707E11C1EB14A005EE40E /* MyMusicHomePage.swift in Sources */,
+				F6073B301C9A7E8F00D7BD11 /* IBInspecView.swift in Sources */,
 				F61774FF1C89291F00C378F4 /* DBPlayView.swift in Sources */,
 				44C715A21C72D48E007F5D08 /* Student.swift in Sources */,
 				6A13D3DD1C1FE00100D4A10C /* Color.theme.swift in Sources */,
