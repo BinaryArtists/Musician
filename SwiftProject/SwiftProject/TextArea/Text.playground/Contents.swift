@@ -80,5 +80,9 @@ let a = 100
 let b = 200
 
 
+var optionalHello: String? = "Hello"
+if let hello = optionalHello where hello.hasPrefix("H"){
+   print(hello)
+}
 
 
