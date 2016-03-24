@@ -59,7 +59,7 @@ class DBPlayView: UIView {
         layer.shadowOffset = CGSizeMake(3,2);
         layer.shadowOpacity = 0.6;
         layer.shadowColor = UIColor.blackColor().CGColor
-        let pan = UIPanGestureRecognizer(target: self, action: "pan:")
+        let pan = UIPanGestureRecognizer(target: self, action: #selector(pan(_:)))
         addGestureRecognizer(pan)
         setSubviews()
         self.addAction { () -> () in
